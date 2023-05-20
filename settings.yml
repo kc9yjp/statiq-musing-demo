@@ -1,0 +1,11 @@
+LinkHideExtensions: false
+SiteTitle: Musings
+PageTitle: |
+  =>
+  {
+    string siteTitle = Context.GetString("SiteTitle");
+    string title = Context.GetString("Title");
+    return  string.IsNullOrWhiteSpace(title) ? siteTitle : $"{siteTitle}: {title}";
+  }
+Copyright: => $"Copyright © {DateTime.Now.Year} by me"
+
