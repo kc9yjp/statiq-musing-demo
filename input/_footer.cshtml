@@ -1,0 +1,14 @@
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        @if (Document.ContainsKey("Canonical"))
+        {
+          <p class="text-center small text-muted">Originally published at <a href='@Document.GetString("Canonical")'>@Document.GetString("Canonical")</a>.</p>
+          <br />
+        }
+        @Html.Partial("_copyright")
+      </div>
+    </div>
+  </div>
+</footer>
