@@ -3,14 +3,14 @@ on: [push]
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
       with:
         submodules: recursive
     - uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.100' # SDK Version to use.
+        dotnet-version: '6.0' # SDK Version to use.
     - run: dotnet run -- deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
