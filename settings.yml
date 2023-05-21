@@ -1,4 +1,5 @@
 LinkHideExtensions: false
+MakeLinksRootRelative: true
 SiteTitle: Musings
 PageTitle: |
   =>
