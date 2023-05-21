@@ -28,6 +28,6 @@ jobs:
       run: dotnet run -- deploy
       env:
         GITHUB_TOKEN: ${{ secrets.MUSINGS_TOKEN }}
-        LINK_ROOT: ${{ variables.LINK_ROOT }}
+        LINK_ROOT: ${{ vars.LINK_ROOT }}
 
 
