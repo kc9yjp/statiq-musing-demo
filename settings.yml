@@ -1,6 +1,6 @@
 LinkHideExtensions: false
-MakeLinksRootRelative: true
 SiteTitle: Musings
+LinkRoot: "=> Config.FromSetting<string>(\"LINK_ROOT\")"
 PageTitle: |
   =>
   {
