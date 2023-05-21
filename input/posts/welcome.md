@@ -3,7 +3,8 @@ Lead: A Statiq Test
 Published: 05/20/2023
 Tags:
   - Omphaloskepis
-  - It's all about me
+  - All About Me
+  - Statiq
 ---
 I'm excited about using Statiq. This is an awesome looking platform.
 
