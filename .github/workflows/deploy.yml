@@ -1,17 +1,31 @@
 name: Deploy Site
-on: [push]
+on: 
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  schedule:
+  - cron:  '0 0 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - name: Checkout Source
+      uses: actions/checkout@master
       with:
         submodules: recursive
+    - name: Checkout Musings
+      uses: actions/checkout@v2
+      with:
+        repository: kc9yjp/musings
+        path: musings
+        
     - uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '6.0' # SDK Version to use.
-    - run: dotnet run -- deploy
+        dotnet-version: '6.0.x' # SDK Version to use.
+    - name: Run Deploy
+      run: dotnet run -- deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
